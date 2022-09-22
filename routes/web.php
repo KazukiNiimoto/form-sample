@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,7 @@ Route::post('/confirm', [FormController::class, 'confirm'])->name('confirm');
 Route::match(['get', 'post'], '/confirm', [FormController::class, 'confirm'])->name('confirm');
 
 Route::post('/thanks', [FormController::class, 'thanks'])->name('thanks');
+
+Route::get('/list', [AdminController::class, 'list'])->name('list');
+
+Route::post('/profile', [AdminController::class, 'profile'])->name('profile');

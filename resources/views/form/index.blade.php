@@ -1,3 +1,6 @@
+<?php
+$_SESSION['token'] = "";
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -18,9 +21,10 @@
 		</div>
 	@endif
 	<form method='post' action='{{ route('confirm') }}'>
+		@csrf
 		name:<input type='text' name='name'><br>
 		email:<input type='text' name='email'><br>
-		request:<input type='text' name='request'><br>
+		inquiry:<input type='text' name='inquiry'><br>
 		<button type='submit'>submit</button>
 	</form>
 </body>

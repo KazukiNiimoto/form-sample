@@ -11,10 +11,10 @@
 		@csrf
 		<input type="hidden" name="name" value={{ $name }}>
 		<input type="hidden" name="email" value={{ $email }}>
-		<input type="hidden" name="request" value={{ $request }}>
+		<input type="hidden" name="inquiry" value={{ $inquiry }}>
 		name:{{ $name }}<br>
 		email:{{ $email }}<br>
-		request:{{ $request }}<br>
+		inquiry:{{ $inquiry }}<br>
 		<button type="submit">submit</button>
 	</form>
 </body>
